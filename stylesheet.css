@@ -10,16 +10,25 @@ a {
   text-decoration: none;
   transition: color 0.4s; }
 
+h5 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2.5vw;
+  font-weight: normal;
+  text-align: center;
+  margin: 0; }
+
 p {
-  line-height: 1.4; }
+  line-height: 1.4;
+  font-family: "Open Sans", sans-serif; }
 
 header {
   width: 100%;
   padding: 20px;
-  background-color: #2c2c2c; }
+  background-color: #2c2c2c;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19); }
   header a {
     color: white;
-    font-family: "Montserrat", Impact; }
+    font-family: "Montserrat", sans-serif; }
     header a:hover {
       color: #27acb0; }
 
@@ -27,9 +36,13 @@ nav {
   float: right; }
   nav a {
     margin-left: 10px; }
+  nav a.activepage {
+    color: #71cacc; }
+    nav a.activepage:hover {
+      color: #27acb0; }
 
 #homebanner {
-  background-image: url(img/bg.jpg);
+  background-image: url(img/bg.png);
   height: 50vh;
   width: 100%;
   background-position: center;
@@ -37,21 +50,50 @@ nav {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  position: relative;
+  margin-bottom: 80px; }
   #homebanner p {
     color: white;
-    font-family: "Montserrat", Impact;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 3.5vw;
-    width: 900px;
-    max-width: 90%;
-    margin: 0 auto;
     text-align: center;
-    padding: 20px 0; }
-    #homebanner p:before {
-      content: "";
-      width: 90%;
+    padding: 10px 0;
+    position: relative; }
+    #homebanner p::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      content: " ";
+      width: 37vw;
       height: 3px;
       background-color: white; }
+    #homebanner p::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      content: " ";
+      width: 37vw;
+      height: 3px;
+      background-color: white; }
+  #homebanner::after {
+    content: " ";
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    background-color: #71cacc; }
+
+.maintext {
+  max-width: 100%;
+  width: 700px;
+  padding: 0 20px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=stylesheet.css.map */
