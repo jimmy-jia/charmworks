@@ -105,14 +105,22 @@ footer
 // Reusable Blocks
 
 .heading
+	width: 80%
+	margin: 0 auto
 	margin-top: 40px
 	text-align: center
 	background-color: $grey
 	padding: 20px
-	font-family: $bold
-	color: white
-	font-size: 150%
-
+	transform: skewX(-20deg)
+	@include card(1)
+	p
+		background-color: $main-color
+		display: inline
+		padding: 22px 8%
+		font-family: $bold
+		color: white
+		font-size: 150%
+	
 
 // Home Page
 
@@ -127,7 +135,7 @@ footer
 	flex-direction: column
 	justify-content: center
 	position: relative
-	margin-bottom: 80px
+	margin-bottom: 60px
 	p
 		color: white
 		font-family: $bold
