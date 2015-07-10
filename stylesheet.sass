@@ -31,12 +31,14 @@ $thin: 'Open Sans Condensed', sans-serif
 	$color: rgba(black, nth(.24 .23 .23 .22 .22, $depth))
 	@return 0 $primary-offset $blur $color
 
-
+// Basic Setup
 
 html, body
 	width: 100%
+	height: 100%
 	padding: 0
 	margin: 0
+	background-color: #f1f1f1
 
 *
 	box-sizing: border-box
@@ -50,9 +52,13 @@ h5
 	font-weight: normal
 	text-align: center
 	margin: 0
-p
+p, li, ul
+	margin: 0
+	padding: 0
 	line-height: 1.4
 	font-family: $body
+
+// Header and Footers
 
 header
 	width: 100%
@@ -72,9 +78,43 @@ nav
 		color: $main-light
 		&:hover
 			color: $main-color
+footer
+	vertical-align: top
+	padding: 17px
+	text-align: center
+	background-color: $grey
+	color: white
+	font-family: $thin
+	height: 52px
+	a
+		vertical-align: top
+		color: $main-color
+		&:hover
+			color: white
+	img
+		position: relative
+		top: -5px
+		padding: 0 5px
+.wrapper
+	min-height: 100%
+	margin-bottom: -52px
+.clear
+	height: 52px
+	width: 100%
+
+// Reusable Blocks
+
+.heading
+	margin-top: 40px
+	text-align: center
+	background-color: $grey
+	padding: 20px
+	font-family: $bold
+	color: white
+	font-size: 150%
 
 
-
+// Home Page
 
 #homebanner
 	background-image: url(img/bg.png)
@@ -124,9 +164,38 @@ nav
 		width: 100%
 		height: 40px
 		background-color: $main-light
-
 .maintext
 	max-width: 100%
 	width: 700px
 	padding: 0 20px
 	margin: 0 auto
+
+
+//	Services
+
+.flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+.services
+	margin-top: 50px
+	div
+		margin: 20px
+		width: 400px
+		@include card(2)
+		*
+			color: #494442
+		p, ul:last-of-type
+			padding: 0 15px 15px 15px
+		li
+			margin-left: 20px
+		p:first-child
+			margin: 0
+			font-family: $body
+			color: $main-color
+			font-size: 130%
+			text-align: center
+			background-color: $grey
+			padding: 10px 0
+			margin-bottom: 15px
+		
